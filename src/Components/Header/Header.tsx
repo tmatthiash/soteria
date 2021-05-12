@@ -1,6 +1,7 @@
 import * as React from "react";
 import "./Header.scss";
 import { ReactComponent as Logo } from "../../Resources/temp-logo.svg"
+import { HeaderTabs } from './HeaderTabs/HeaderTabs';
 
 
 // interface EmptyFunctionalProps {
@@ -13,9 +14,7 @@ export const Header = () => (
         <Logo className="header-logo-area-logo"/>
         <span className="header-logo-area-text">Soteria</span>
       </div>
-      <div className="header-tabs-area">
-        test
-      </div>
+      <HeaderTabs />
       <div className="header-user-area">
         user
       </div>

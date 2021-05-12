@@ -1,0 +1,35 @@
+@import "../../Colors.scss";
+
+
+.header {
+  @include color-theme('background-color', 'accent-background');
+  @include color-theme('color', 'accent-text');
+
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-logo-area {
+  display: flex;
+  align-items: center;
+  width: 264px;
+}
+
+.header-logo-area-logo {
+  @include color-theme('fill', 'logo-color');
+
+  height: 50px;
+  width: 50px;
+}
+
+.header-logo-area-text {
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+.header-tabs-area {
+  margin-right: auto;
+}
+
+.header-user-area {}

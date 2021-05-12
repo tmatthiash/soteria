@@ -5,7 +5,7 @@ import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import {Reducer, defaultState} from './Store/reducer';
+import { Reducer, defaultState } from './Store/reducer';
 
 const store = createStore(Reducer, defaultState)
 

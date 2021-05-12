@@ -12,10 +12,10 @@ export const HeaderTabs = () => {
 
   return (
     <div className="header-tabs">
-    <button type="button" onClick={()=>{}}>
-      IDF Incident List + {tabSelected}
+    <button type="button" className="header-tabs-button" onClick={()=>{}}>
+      IDF Incident List {tabSelected}
     </button>
-    <button type="button" onClick={()=>{}}>
+    <button type="button" className="header-tabs-button" onClick={()=>{}}>
       Create New Incident
     </button>
   </div>

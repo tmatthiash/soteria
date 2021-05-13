@@ -8,7 +8,7 @@ import reportWebVitals from './reportWebVitals';
 import { Reducer, defaultState } from './Store/reducer';
 
 const store = createStore(Reducer, defaultState)
-
+// test commit
 
 ReactDOM.render(
   <React.StrictMode>

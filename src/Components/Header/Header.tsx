@@ -1,6 +1,6 @@
 import * as React from "react";
 import "./Header.scss";
-import { ReactComponent as Logo } from "../../Resources/temp-logo.svg"
+import { ReactComponent as Logo } from "../../Resources/Logo.svg"
 import { HeaderTabs } from './HeaderTabs/HeaderTabs';
 
 

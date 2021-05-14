@@ -1,3 +1,22 @@
+@import "../../../Colors.scss";
+
 .header-tabs{
   margin-right: auto;
+}
+
+.header-tabs-button {
+  @include color-theme('color', 'accent-text');
+
+  box-sizing: border-box;
+  background-color: transparent;
+  border: none;
+  font-size: 18px;
+  padding: 0 16px;
+  height: 46px;
+}
+
+.header-tabs-button__selected {
+  @include color-theme('border-color', 'border-color');
+
+  border-bottom: solid 4px;
 }

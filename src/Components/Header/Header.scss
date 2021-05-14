@@ -1,11 +1,10 @@
 @import "../../Colors.scss";
 
-
 .header {
   @include color-theme('background-color', 'accent-background');
   @include color-theme('color', 'accent-text');
 
-  height: 50px;
+  height: 48px;
   display: flex;
 }
 
@@ -18,8 +17,9 @@
 .header-logo-area-logo {
   @include color-theme('fill', 'logo-color');
 
-  height: 50px;
-  width: 50px;
+  width: 16px;
+  height: 33px;
+  margin: 0 16px 4px 16px;
 }
 
 .header-logo-area-text {

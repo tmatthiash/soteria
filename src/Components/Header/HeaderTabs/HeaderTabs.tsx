@@ -18,7 +18,6 @@ export const HeaderTabs = () => {
               className={classNames('header-tabs-button', 'primary-button', tabSelected === "list" ? "header-tabs-button__selected" : "")}
               onClick={() => {
                 clickHandler("list");
-                
               }}>
         IDF Incident List
       </button>
@@ -29,11 +28,6 @@ export const HeaderTabs = () => {
               }}>
         Create New Incident
       </button>
-
-      {tabSelected}
     </div>
   );
 };
-
-// tabSelected == "list" ? "the-class-name" : ""
-// if (tabselected == list){return "the class name"} else {return ""}

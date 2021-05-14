@@ -44,3 +44,29 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+## Docker things
+Note: this will only work locally, a different dockerfile must be used for prod (example in the comments of the dockerfile)
+
+Steps to get this app running in a container
+1. Build an image from the dockerfile do NOT forget the period at the end
+   
+    ```sudo docker build -t containerName:ContainerVersion .```
+   
+
+2. Find the image id   
+   
+   ``` sudo docker images```
+   
+
+3. Run the image (where ######## is the image ID)
+   
+   ```sudo docker run -d -p 8080:8080 #######```
+   
+
+4. Check that it worked
+   
+   ```sudo docker ps```
+   
+   Also, just look in the browser
+    

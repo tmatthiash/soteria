@@ -11,24 +11,29 @@
 .header-logo-area {
   display: flex;
   align-items: center;
-  width: 264px;
+  width: 265px;
 }
 
 .header-logo-area-logo {
-  @include color-theme('fill', 'logo-color');
-
-  width: 16px;
-  height: 33px;
-  margin: 0 16px 4px 16px;
+  width: 32px;
+  height: 32px;
+  margin: 0 8px 4px 16px;
 }
 
 .header-logo-area-text {
-  font-size: 20px;
-  margin-left: 10px;
+  width: 85px;
+  height: 18px;
 }
 
 .header-tabs-area {
   margin-right: auto;
 }
 
-.header-user-area {}
+.header-user-area {
+  margin: 12px 16px 12px 0;
+}
+
+.header-user-area-image {
+  width: 24px;
+  height: 24px;
+}

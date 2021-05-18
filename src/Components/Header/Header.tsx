@@ -1,8 +1,8 @@
-import * as React from "react";
-import "./Header.scss";
-import { ReactComponent as Logo } from "../../Resources/Logo.svg";
-import { ReactComponent as LogoText } from "../../Resources/LogoText.svg";
-import { ReactComponent as User } from "../../Resources/User.svg";
+import * as React from 'react';
+import './Header.scss';
+import { ReactComponent as LogoIcon } from '../../Resources/Logo.svg';
+import { ReactComponent as LogoTextIcon } from '../../Resources/LogoText.svg';
+import { ReactComponent as UserIcon } from '../../Resources/User.svg';
 import { HeaderTabs } from './HeaderTabs/HeaderTabs';
 
 
@@ -11,14 +11,14 @@ import { HeaderTabs } from './HeaderTabs/HeaderTabs';
 // }
 
 export const Header = () => (
-    <div className="header">
-      <div className="header-logo-area">
-        <Logo className="header-logo-area-logo"/>
-        <LogoText className="header-logo-area-text"/>
-      </div>
-      <HeaderTabs />
-      <div className="header-user-area">
-          <User className="header-user-area-image"/>
-      </div>
+  <header className='header'>
+    <div className='header-logo-area'>
+      <LogoIcon className='header-logo-area-logo' />
+      <LogoTextIcon className='header-logo-area-text' />
     </div>
-  );
+    <HeaderTabs />
+    <div className='header-user-area'>
+      <UserIcon className='header-user-area-image' />
+    </div>
+  </header>
+);

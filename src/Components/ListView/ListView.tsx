@@ -19,19 +19,19 @@ export const ListView = () => {
   const filterSet = useSelector((state: AppState) => state.filterSet);
 
 
-  const handleBaseChange = (values: string[]) => {
-    const newFilters: FilterSet = { ...filterSet, base: values };
+  const handleBasesChange = (values: string[]) => {
+    const newFilters: FilterSet = { ...filterSet, bases: values };
     dispatch({ type: 'SET_FILTER_SET', filterSet: newFilters });
   };
 
   return (
     <div className='list-view'>
       <MultiSelect
-        onChange={handleBaseChange}
-        initiallySelectedValues={filterSet.base}
+        onChange={handleBasesChange}
+        initiallySelectedValues={filterSet.bases}
         labelText='helloooooooo'
         menuOptions={options} />
-      {filterSet.base}
+      {filterSet.bases}
     </div>
   );
 };

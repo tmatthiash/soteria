@@ -9,7 +9,7 @@ interface State {
 
 export const defaultState: State = {
   tabSelected: 'list',
-  filterSet: { base: [] },
+  filterSet: { bases: [] },
 };
 
 // eslint-disable-next-line @typescript-eslint/default-param-last

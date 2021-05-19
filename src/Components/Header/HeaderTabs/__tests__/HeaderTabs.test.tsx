@@ -1,5 +1,5 @@
 import React from 'react';
-import { SoteriaMount } from '../../../../Test/SoteriaMount';
+import { SoteriaMount } from '../../../../TestUtils/SoteriaMount';
 import { HeaderTabs } from '../HeaderTabs';
 
 describe('when the header tabs load', () => {

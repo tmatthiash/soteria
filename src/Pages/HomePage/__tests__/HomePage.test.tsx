@@ -1,5 +1,5 @@
 import React from 'react';
-import { SoteriaMount } from '../../../Test/SoteriaMount';
+import { SoteriaMount } from '../../../TestUtils/SoteriaMount';
 import { HomePage } from '../HomePage';
 
 describe('when the home page loads', () => {

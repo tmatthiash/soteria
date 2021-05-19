@@ -1,9 +1,9 @@
 import * as React from 'react';
 import { useState } from 'react';
 import { v4 as uuid } from 'uuid';
+import classNames from 'classnames';
 
 interface MultiSelectProps {
-  // eslint-disable-next-line react/no-unused-prop-types
   onChange: (values: string[]) => void;
   initiallySelectedValues: string[];
   menuOptions: MultiselectMenuOption[];
@@ -17,7 +17,8 @@ export interface MultiselectMenuOption {
 
 export const MultiSelect = (props: MultiSelectProps) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [selectedValues, setSelectedValues] = useState(props.initiallySelectedValues);
+  const [selectedValues, setSelectedValues] =
+    useState(props.initiallySelectedValues);
 
   const toggleSelection = (valueSelected: string) => {
     if (selectedValues.includes(valueSelected)) {
@@ -31,11 +32,11 @@ export const MultiSelect = (props: MultiSelectProps) => {
   };
 
   const toggleIsOpen = () => {
-    if(isOpen){
+    if (isOpen) {
       props.onChange(selectedValues);
     }
-    setIsOpen(!isOpen)
-  }
+    setIsOpen(!isOpen);
+  };
 
   return (
     <div className='multiselect-holder'>
@@ -46,10 +47,12 @@ export const MultiSelect = (props: MultiSelectProps) => {
         {props.menuOptions.map((opt) => (
           <button key={uuid()}
                   type='button'
-                  className='multiselect-dropdown-option'
+                  className={classNames('multiselect-dropdown-option',
+                    selectedValues.includes(opt.value)
+                      ? "multiselect-dropdown-option__selected" : "")}
                   onClick={() => toggleSelection(opt.value)}
           >
-            {opt.label + (selectedValues.includes(opt.value) ? ' yes' : ' no')}
+            {opt.label}
           </button>))}
       </div> : null}
     </div>);

@@ -2,6 +2,8 @@ import * as React from 'react';
 import { useState } from 'react';
 import { v4 as uuid } from 'uuid';
 import classNames from 'classnames';
+import { ReactComponent as UserIcon } from '../../Resources/User.svg';
+import './MultiSelect.scss';
 
 interface MultiSelectProps {
   onChange: (values: string[]) => void;
@@ -41,7 +43,10 @@ export const MultiSelect = (props: MultiSelectProps) => {
   return (
     <div className='multiselect-holder'>
       <button className='multiselect' type='button'
-              onClick={toggleIsOpen}>{props.labelText}
+              onClick={toggleIsOpen}>
+        <div className="multiselect-text">{props.labelText}</div>
+        <UserIcon className={classNames("multiselect-icon",
+          isOpen ? "multiselect-icon__open" : "")}/>
       </button>
       {isOpen ? <div className='multiselect-dropdown'>
         {props.menuOptions.map((opt) => (
@@ -49,7 +54,7 @@ export const MultiSelect = (props: MultiSelectProps) => {
                   type='button'
                   className={classNames('multiselect-dropdown-option',
                     selectedValues.includes(opt.value)
-                      ? "multiselect-dropdown-option__selected" : "")}
+                      ? 'multiselect-dropdown-option__selected' : '')}
                   onClick={() => toggleSelection(opt.value)}
           >
             {opt.label}

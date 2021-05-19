@@ -29,7 +29,7 @@ export const ListView = () => {
       <MultiSelect
         onChange={handleBasesChange}
         initiallySelectedValues={filterSet.bases}
-        labelText='helloooooooo'
+        labelText='Base'
         menuOptions={options} />
       {filterSet.bases}
     </div>
